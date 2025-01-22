@@ -2,6 +2,7 @@ import { CogIcon } from "@sanity/icons";
 import { defineArrayMember, defineField, defineType } from "sanity";
 
 import * as demo from "@/sanity/lib/demo";
+import Link from "next/link";
 
 export default defineType({
   name: "settings",
@@ -108,12 +109,12 @@ export default defineType({
           name: "metadataBase",
           type: "url",
           description: (
-            <a
+            <Link
               href="https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase"
               rel="noreferrer noopener"
             >
               More information
-            </a>
+            </Link>
           ),
         }),
       ],

@@ -23,7 +23,7 @@ const AlertBanner = () => {
           <Link href="/" className="text-gray-700 hover:text-blue-500">
             Home
           </Link>
-          <Link href="/#" className="text-gray-700 hover:text-blue-500">
+          <Link href="#" className="text-gray-700 hover:text-blue-500">
             Magazines
           </Link>
          
@@ -63,30 +63,30 @@ const AlertBanner = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white shadow-md">
-          <a
+          <Link
             href="/"
             className="block py-2 px-4 text-gray-700 hover:bg-gray-100 hover:text-blue-500"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/about"
             className="block py-2 px-4 text-gray-700 hover:bg-gray-100 hover:text-blue-500"
           >
             About
-          </a>
-          <a
+          </Link>
+          <Link
             href="/blog"
             className="block py-2 px-4 text-gray-700 hover:bg-gray-100 hover:text-blue-500"
           >
             Blog
-          </a>
-          <a
+          </Link>
+          <Link
             href="/contact"
             className="block py-2 px-4 text-gray-700 hover:bg-gray-100 hover:text-blue-500"
           >
             Contact
-          </a>
+          </Link>
         </div>
       )}
     </nav>
