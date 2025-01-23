@@ -79,7 +79,7 @@ export default async function RootLayout({
             <div className="container mx-auto px-5">
               {footer.length > 0 ? (
                 <PortableText
-                  className="prose-sm text-pretty bottom-0 w-full max-w-none bg-white py-12 text-center md:py-20"
+                  className="prose-sm text-teal-400 text-pretty bottom-0 w-full max-w-none bg-white py-12 text-center md:py-20"
                   value={footer as PortableTextBlock[]}
                 />
               ) : (

@@ -1,13 +1,3 @@
-/**
- * This component uses Portable Text to render a post body.
- *
- * You can learn more about Portable Text on:
- * https://www.sanity.io/docs/block-content
- * https://github.com/portabletext/react-portabletext
- * https://portabletext.org/
- *
- */
-
 import {
   PortableText,
   type PortableTextComponents,
@@ -24,21 +14,37 @@ export default function CustomPortableText({
 }) {
   const components: PortableTextComponents = {
     block: {
-      h5: ({ children }) => (
-        <h5 className="mb-2 text-sm font-semibold">{children}</h5>
+      h1: ({ children }) => (
+        <h1 className="text-4xl font-bold text-teal-400 mb-4">{children}</h1>
       ),
-      h6: ({ children }) => (
-        <h6 className="mb-1 text-xs font-semibold">{children}</h6>
+      h2: ({ children }) => (
+        <h2 className="text-3xl font-semibold text-teal-400 mb-4">{children}</h2>
+      ),
+      h3: ({ children }) => (
+        <h3 className="text-2xl font-medium text-teal-400 mb-4">{children}</h3>
+      ),
+      normal: ({ children }) => (
+        <p className="text-white text-lg leading-relaxed mb-4">{children}</p>
+      ),
+      blockquote: ({ children }) => (
+        <blockquote className="italic text-gray-400 border-l-4 border-teal-400 pl-4 my-4">
+          {children}
+        </blockquote>
       ),
     },
     marks: {
-      link: ({ children, value }) => {
-        return (
-          <Link href={value?.href} rel="noreferrer noopener">
-            {children}
-          </Link>
-        );
-      },
+      em: ({ children }) => (
+        <em className="text-teal-400 italic">{children}</em>
+      ),
+      link: ({ children, value }) => (
+        <Link
+          href={value?.href}
+          rel="noopener noreferrer"
+          className="text-white underline hover:text-blue-300"
+        >
+          {children}
+        </Link>
+      ),
     },
   };
 
