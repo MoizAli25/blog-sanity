@@ -19,15 +19,15 @@ const AlertBanner = () => {
             <div className="text-2xl font-bold text-teal-400">Coinomics</div>
           </div>
           <nav className="hidden md:flex  space-x-8 text-sm font-medium">
-          <a href="/" className="hover:text-teal-300 transition">
+          <Link href="/" className="hover:text-teal-300 transition">
               Home
-            </a>
-            <a href="/about" className="hover:text-teal-300 transition">
+            </Link>
+            <Link href="/about" className="hover:text-teal-300 transition">
               About Us
-            </a>
-            <a href="/contact" className="hover:text-teal-300 transition">
+            </Link>
+            <Link href="/contact" className="hover:text-teal-300 transition">
               Contact
-            </a>
+            </Link>
             
           </nav>
           <div className="flex items-center space-x-4">
