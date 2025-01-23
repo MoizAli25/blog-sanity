@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Link from "next/link";
 import React, { useState } from "react";
@@ -11,23 +11,34 @@ const AlertBanner = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md">
-      <div className="container mx-auto px-4 flex justify-between items-center py-4">
+    <nav className="bg-black shadow-md">
+      <div className="container mx-auto px-4  py-4">
         {/* Logo */}
-        <Link href="/" className="text-3xl font-bold text-red-900">
-          MZBlogs.
-        </Link>
-
-        {/* Desktop Menu */}
-        <div className="hidden text-2xl md:flex space-x-6">
-          <Link href="/" className="text-gray-700 hover:text-blue-500">
-            Home
-          </Link>
-          <Link href="#" className="text-gray-700 hover:text-blue-500">
-            Magazines
-          </Link>
-         
-        </div>
+        <header className="flex justify-between items-center px-10 py-4 bg-opacity-80 backdrop-blur-md">
+          <div className="flex items-center  space-x-4">
+            <div className="text-2xl font-bold text-teal-400">Coinomics</div>
+          </div>
+          <nav className="hidden md:flex  space-x-8 text-sm font-medium">
+          <a href="/" className="hover:text-teal-300 transition">
+              Home
+            </a>
+            <a href="/about" className="hover:text-teal-300 transition">
+              About Us
+            </a>
+            <a href="/contact" className="hover:text-teal-300 transition">
+              Contact
+            </a>
+            
+          </nav>
+          <div className="flex items-center space-x-4">
+            <button className="text-sm font-medium hover:text-teal-300 transition">
+              Sign In
+            </button>
+            <button className="px-4 py-2 bg-teal-400 text-black rounded-lg font-medium hover:bg-teal-300 transition">
+              Registry
+            </button>
+          </div>
+        </header>
 
         {/* Mobile Menu Button */}
         <button

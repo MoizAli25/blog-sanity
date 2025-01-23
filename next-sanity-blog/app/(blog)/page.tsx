@@ -45,6 +45,10 @@ function HeroPost({
   "title" | "coverImage" | "date" | "excerpt" | "author" | "slug"
 >) {
   return (
+    <><div className="relative">
+    <div className="absolute w-96 h-96 bg-gradient-to-r from-teal-400 via-purple-500 to-blue-600 rounded-full filter blur-3xl opacity-30 -top-16 -left-16"></div>
+    <div className="absolute w-96 h-96 bg-gradient-to-r from-purple-400 via-pink-500 to-yellow-400 rounded-full filter blur-3xl opacity-30 -bottom-16 -right-16"></div>
+    <div className="relative z-10">
     <article>
       <Link className="group mb-8 block md:mb-16" href={`/posts/${slug}`}>
         <CoverImage image={coverImage} priority />
@@ -70,6 +74,10 @@ function HeroPost({
         </div>
       </div>
     </article>
+    </div>
+  </div>
+    
+    </>
   );
 }
 
